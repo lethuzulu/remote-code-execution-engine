@@ -20,7 +20,7 @@ const getChannel = async () => {
             channel = await connection.createChannel()
             return channel
         } catch (error) {
-            console.log(error)
+            throw error
         }
     } else {
         throw Error('Not Connected to RabbitMQ!')
